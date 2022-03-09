@@ -5,7 +5,7 @@ const About: React.FC = () => {
 
 	return (
 		<PageContainer>
-
+			about
 		</PageContainer>
 	)
 }

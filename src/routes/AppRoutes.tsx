@@ -1,5 +1,8 @@
+import PageContainer from 'components/PageContainer/PageContainer'
+import Sidebar from 'components/Sidebar/Sidebar'
 import React, { Suspense, lazy } from 'react'
-import { Route, MemoryRouter as Router, Routes } from 'react-router'
+import { Route, Routes } from 'react-router'
+import { BrowserRouter as Router } from 'react-router-dom'
 
 const Home = lazy(() => import('pages/Home'))
 const About = lazy(() => import('pages/About'))
@@ -10,7 +13,8 @@ const Projects = lazy(() => import('pages/Projects'))
 const AppRoutes: React.FC = () => {
 	return (
 		<Router>
-			<Suspense fallback={<></>}>
+			<Sidebar />
+			<Suspense fallback={<PageContainer />}>
 				<Routes>
 					<Route path='/' element={<Home />} />
 					<Route path='/about' element={<About />} />

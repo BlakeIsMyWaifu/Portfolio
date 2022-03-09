@@ -5,7 +5,7 @@ const Contact: React.FC = () => {
 
 	return (
 		<PageContainer>
-
+			contact
 		</PageContainer>
 	)
 }

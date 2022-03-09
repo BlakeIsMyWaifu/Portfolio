@@ -5,7 +5,7 @@ const Projects: React.FC = () => {
 
 	return (
 		<PageContainer>
-
+			projects
 		</PageContainer>
 	)
 }

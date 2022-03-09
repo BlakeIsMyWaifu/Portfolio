@@ -5,7 +5,7 @@ const Skills: React.FC = () => {
 
 	return (
 		<PageContainer>
-
+			skills
 		</PageContainer>
 	)
 }
