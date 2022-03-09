@@ -1,18 +1,19 @@
 import { Link } from 'react-router-dom'
 import styled, { css } from 'styled-components'
+import { cream, deepBlue, silverPink } from 'utils/colours'
 
 const TextColours = css`
-	color: #F2E9E4;
+	color: ${cream};
 	text-decoration: none;
 	&:hover {
-		color: #C9ADA7;
+		color: ${silverPink};
 	}
 `
 
 export const Container = styled.div`
 	width: 300px;
 	height: 100%;
-	background-color: #22223B;
+	background-color: ${deepBlue};
 `
 
 export const PageLinkContainer = styled.div`

@@ -1,6 +1,7 @@
 import React from 'react'
 import { IconContext } from 'react-icons'
 import { FaEnvelope, FaGithub } from 'react-icons/fa'
+import { cream } from 'utils/colours'
 
 import { BottomLinkContainer, Container, IconContainer, IconLink, PageLink, PageLinkContainer, ResumeLink } from './Sidebar-Elements'
 
@@ -23,7 +24,7 @@ const Sidebar: React.FC = () => {
 				<IconContainer>
 
 					<IconContext.Provider value={{
-						color: '#F2E9E4',
+						color: cream,
 						size: '48'
 					}}>
 
