@@ -1,3 +1,4 @@
+import AnimatedPage from 'components/AnimatedPage/AnimatedPage'
 import React from 'react'
 
 import { ChildWrapper, Container } from './PageContainer-Elements'
@@ -5,9 +6,11 @@ import { ChildWrapper, Container } from './PageContainer-Elements'
 const PageContainer: React.FC = ({ children }) => {
 	return (
 		<Container>
-			<ChildWrapper>
-				{children}
-			</ChildWrapper>
+			<AnimatedPage>
+				<ChildWrapper>
+					{children}
+				</ChildWrapper>
+			</AnimatedPage>
 		</Container>
 	)
 }
