@@ -3,11 +3,13 @@ export const mulledBlue = '#4A4E69'
 export const zodiacBlue = 'rgba(57, 63, 84, 0.8)'
 export const silverPink = '#C9ADA7'
 export const cream = '#F2E9E4'
+export const mountainMist = '#9A8C98'
 
 export default {
 	deepBlue,
 	mulledBlue,
 	zodiacBlue,
 	silverPink,
-	cream
+	cream,
+	mountainMist
 }

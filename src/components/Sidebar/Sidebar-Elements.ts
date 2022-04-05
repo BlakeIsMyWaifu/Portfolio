@@ -14,6 +14,7 @@ export const Container = styled.div`
 	width: 300px;
 	height: 100%;
 	background-color: ${deepBlue};
+	position: fixed;
 `
 
 export const PageLinkContainer = styled.div`

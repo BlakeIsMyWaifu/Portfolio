@@ -7,6 +7,12 @@ export const Title = styled.h1`
 	padding: 2rem;
 `
 
+export const Subtitle = styled.h1`
+	color: ${silverPink};
+	font-size: 2.5rem;
+	padding: 2rem;
+`
+
 export const Paragraph = styled.p`
 	color: ${cream};
 	font-size: 2rem;
