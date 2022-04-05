@@ -1,9 +1,9 @@
 import PageContainer from 'components/PageContainer'
-import React from 'react'
+import { FC } from 'react'
 
 import { TextContainer, TextHello, TextJobTitle, TextName } from './Home-Elements'
 
-const Home: React.FC = () => {
+const Home: FC = () => {
 
 	const textHello = 'Hello, I\'m'
 	const textName = 'Joel Dohm-Karatjas'

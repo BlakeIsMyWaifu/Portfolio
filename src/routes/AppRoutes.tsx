@@ -1,6 +1,6 @@
 import PageContainer from 'components/PageContainer/PageContainer'
 import Sidebar from 'components/Sidebar/Sidebar'
-import React, { Suspense, lazy } from 'react'
+import { FC, Suspense, lazy } from 'react'
 import { Route, Routes } from 'react-router'
 import { BrowserRouter as Router } from 'react-router-dom'
 
@@ -10,7 +10,7 @@ const Skills = lazy(() => import('pages/Skills'))
 const Contact = lazy(() => import('pages/Contact'))
 const Projects = lazy(() => import('pages/Projects'))
 
-const AppRoutes: React.FC = () => {
+const AppRoutes: FC = () => {
 	return (
 		<Router>
 			<Sidebar />

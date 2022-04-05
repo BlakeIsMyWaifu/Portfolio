@@ -1,8 +1,8 @@
 import PageContainer from 'components/PageContainer'
 import { Paragraph, Title } from 'components/Text/Text-Elements'
-import React from 'react'
+import { FC } from 'react'
 
-const About: React.FC = () => {
+const About: FC = () => {
 
 	const paragraph = [
 		'Hi, I\'m a 21 year old self taught programmer from London.',

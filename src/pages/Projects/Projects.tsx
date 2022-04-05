@@ -1,6 +1,6 @@
 import PageContainer from 'components/PageContainer'
 import { Subtitle, Title } from 'components/Text/Text-Elements'
-import React from 'react'
+import { FC } from 'react'
 
 import { TileContainer } from './Projects-Elements'
 import ProjectTile from './ProjectTile'
@@ -14,7 +14,7 @@ export interface TileData {
 	demo?: string;
 }
 
-const Projects: React.FC = () => {
+const Projects: FC = () => {
 
 	const projectData: TileData[] = [
 		{

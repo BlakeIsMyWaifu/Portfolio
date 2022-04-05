@@ -1,4 +1,4 @@
-import React from 'react'
+import { FC } from 'react'
 import { FaExternalLinkAlt, FaGithub } from 'react-icons/fa'
 
 import { TileData } from '../Projects'
@@ -8,7 +8,7 @@ interface ProjectTileProps extends TileData {
 	right: boolean;
 }
 
-const ProjectTile: React.FC<ProjectTileProps> = ({title, image, description, stack, github, demo, right}) => {
+const ProjectTile: FC<ProjectTileProps> = ({ title, image, description, stack, github, demo, right }) => {
 	return (
 		<Container right={right}>
 			<Thumbnail src={`images/projectsPreviews/${image}.jpg`} />

@@ -1,6 +1,6 @@
 import './index.css'
 
-import React from 'react'
+import { StrictMode } from 'react'
 import ReactDOMClient from 'react-dom/client'
 
 import App from './App'
@@ -9,6 +9,6 @@ const container = document.getElementById('root') as HTMLElement
 
 const root = ReactDOMClient.createRoot(container)
 
-root.render(<React.StrictMode>
+root.render(<StrictMode>
 	<App />
-</React.StrictMode>)
+</StrictMode>)

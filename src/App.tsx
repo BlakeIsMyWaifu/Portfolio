@@ -1,9 +1,9 @@
 import { Container } from 'App-Elements'
 import { AnimatePresence } from 'framer-motion'
-import React from 'react'
+import { FC } from 'react'
 import AppRoutes from 'routes/AppRoutes'
 
-const App: React.FC = () => {
+const App: FC = () => {
 	return (
 		<Container>
 			<AnimatePresence exitBeforeEnter>

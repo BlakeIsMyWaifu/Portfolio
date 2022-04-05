@@ -1,11 +1,11 @@
 import PageContainer from 'components/PageContainer'
 import { Paragraph, Title } from 'components/Text/Text-Elements'
-import React from 'react'
+import { FC } from 'react'
 
 import SkillBar from './SkillBar/SkillBar'
 import { InnerContainer, SkillBarContainer } from './Skills-Elements'
 
-const Skills: React.FC = () => {
+const Skills: FC = () => {
 
 	const paragraph = 'I build fast, responsive and maintainable websites mainly with React with TypeScript.'
 

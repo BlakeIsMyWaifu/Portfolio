@@ -1,11 +1,11 @@
-import React from 'react'
+import { FC } from 'react'
 import { IconContext } from 'react-icons'
 import { FaEnvelope, FaGithub } from 'react-icons/fa'
 import { cream } from 'utils/colours'
 
 import { BottomLinkContainer, Container, IconContainer, IconLink, PageLink, PageLinkContainer, ResumeLink } from './Sidebar-Elements'
 
-const Sidebar: React.FC = () => {
+const Sidebar: FC = () => {
 	return (
 		<Container>
 

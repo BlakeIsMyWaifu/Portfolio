@@ -1,9 +1,9 @@
 import AnimatedPage from 'components/AnimatedPage/AnimatedPage'
-import React from 'react'
+import { FC } from 'react'
 
 import { ChildWrapper, Container } from './PageContainer-Elements'
 
-const PageContainer: React.FC = ({ children }) => {
+const PageContainer: FC = ({ children }) => {
 	return (
 		<Container>
 			<AnimatedPage>

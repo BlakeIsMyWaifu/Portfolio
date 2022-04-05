@@ -1,4 +1,4 @@
-import React from 'react'
+import { FC } from 'react'
 
 import { BarWrapper, BlackBar, ColouredBar, Container, Title } from './SkillBar-Elements'
 
@@ -8,7 +8,7 @@ interface SkillBarProps {
 	colour: string;
 }
 
-const SkillBar: React.FC<SkillBarProps> = ({ name, level, colour }) => {
+const SkillBar: FC<SkillBarProps> = ({ name, level, colour }) => {
 	return (
 		<Container>
 			<Title>{name}</Title>

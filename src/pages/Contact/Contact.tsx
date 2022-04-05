@@ -1,11 +1,11 @@
 import PageContainer from 'components/PageContainer'
 import { Paragraph, Title } from 'components/Text/Text-Elements'
 import emailjs from 'emailjs-com'
-import React, { useState } from 'react'
+import { FC, useState } from 'react'
 
 import { Button, FormContainer, Input, InputWrapper, TextArea } from './Contact-Elements'
 
-const Contact: React.FC = () => {
+const Contact: FC = () => {
 
 	const [name, setName] = useState('')
 	const [email, setEmail] = useState('')
