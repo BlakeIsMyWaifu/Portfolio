@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { cream, deepBlue, silverPink } from 'utils/colours'
+import { cream, deepBlue, silverPink, zodiacBlue } from 'utils/colours'
 
 interface ContainerProps {
 	right: boolean;
@@ -8,6 +8,7 @@ interface ContainerProps {
 export const Container = styled.div<ContainerProps>`
 	height: 300px;
 	width: 80%;
+	background-color: ${zodiacBlue};
 	display: flex;
 	flex-direction: ${props => props.right ? 'row-reverse' : 'row'};
 	justify-content: space-between;
@@ -36,6 +37,7 @@ export const Description = styled.p`
 	color: ${cream};
 	font-size: 1.5rem;
 	padding: 8px;
+	margin: 0 10px;
 `
 
 export const StackWrapper = styled.span`

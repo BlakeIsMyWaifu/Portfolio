@@ -1,14 +1,14 @@
 import { FC } from 'react'
 import { FaExternalLinkAlt, FaGithub } from 'react-icons/fa'
 
-import { TileData } from '../Projects'
+import { TileData } from '../projectData'
 import { Button, Buttons, Container, Description, Stack, StackWrapper, TextWrapper, Thumbnail, Title } from './ProjectTile-Elements'
 
 interface ProjectTileProps extends TileData {
 	right: boolean;
 }
 
-const ProjectTile: FC<ProjectTileProps> = ({ title, image, description, stack, github, demo, right }) => {
+const ProjectTile: FC<ProjectTileProps> = ({ title, image, description, stack, github, website, right }) => {
 	return (
 		<Container right={right}>
 			<Thumbnail src={`images/projectsPreviews/${image}.jpg`} />
@@ -29,7 +29,7 @@ const ProjectTile: FC<ProjectTileProps> = ({ title, image, description, stack, g
 						</Button>
 					}
 					{
-						demo && <Button href={demo} target='_blank' aria-label='Demo' rel='noopener noreferrer'>
+						website && <Button href={website} target='_blank' aria-label='Demo' rel='noopener noreferrer'>
 							<FaExternalLinkAlt size={32} />
 						</Button>
 					}
