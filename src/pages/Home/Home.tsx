@@ -1,21 +1,19 @@
 import PageContainer from 'components/PageContainer'
+import About from 'pages/About'
+import Contact from 'pages/Contact'
+import Hero from 'pages/Hero'
+import Projects from 'pages/Projects'
+import Skills from 'pages/Skills'
 import { FC } from 'react'
 
-import { TextContainer, TextHello, TextJobTitle, TextName } from './Home-Elements'
-
 const Home: FC = () => {
-
-	const textHello = 'Hello, I\'m'
-	const textName = 'Joel Dohm-Karatjas'
-	const textJobTitle = 'Junior Front End Web Developer'
-
 	return (
 		<PageContainer>
-			<TextContainer >
-				<TextHello>{textHello}</TextHello>
-				<TextName>{textName}</TextName>
-				<TextJobTitle>{textJobTitle}</TextJobTitle>
-			</TextContainer>
+			<Hero />
+			<About />
+			<Skills />
+			<Contact />
+			<Projects />
 		</PageContainer>
 	)
 }

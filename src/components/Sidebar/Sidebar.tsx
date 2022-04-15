@@ -3,44 +3,47 @@ import { IconContext } from 'react-icons'
 import { FaEnvelope, FaGithub } from 'react-icons/fa'
 import { cream } from 'utils/colours'
 
-import { BottomLinkContainer, Container, IconContainer, IconLink, PageLink, PageLinkContainer, ResumeLink } from './Sidebar-Elements'
+import { BackPadding, BottomLinkContainer, Container, IconContainer, IconLink, PageLink, PageLinkContainer, ResumeLink } from './Sidebar-Elements'
 
 const Sidebar: FC = () => {
 	return (
-		<Container>
+		<>
+			<Container>
 
-			<PageLinkContainer>
-				<PageLink to='/'>Home</PageLink>
-				<PageLink to='/about'>About</PageLink>
-				<PageLink to='/skills'>Skills</PageLink>
-				<PageLink to='/contact'>Contact</PageLink>
-				<PageLink to='/projects'>Projects</PageLink>
-			</PageLinkContainer>
+				<PageLinkContainer>
+					<PageLink to='/'>Home</PageLink>
+					<PageLink to='/about'>About</PageLink>
+					<PageLink to='/skills'>Skills</PageLink>
+					<PageLink to='/contact'>Contact</PageLink>
+					<PageLink to='/projects'>Projects</PageLink>
+				</PageLinkContainer>
 
-			<BottomLinkContainer>
+				<BottomLinkContainer>
 
-				<ResumeLink>Résumé</ResumeLink>
+					<ResumeLink>Résumé</ResumeLink>
 
-				<IconContainer>
+					<IconContainer>
 
-					<IconContext.Provider value={{
-						color: cream,
-						size: '48'
-					}}>
+						<IconContext.Provider value={{
+							color: cream,
+							size: '48'
+						}}>
 
-						<IconLink href='mailto:joel.dohmkaratjas@gmail.com' target='_blank' aria-label='Email' rel='noopener noreferrer'>
-							<FaEnvelope />
-						</IconLink>
+							<IconLink href='mailto:joel.dohmkaratjas@gmail.com' target='_blank' aria-label='Email' rel='noopener noreferrer'>
+								<FaEnvelope />
+							</IconLink>
 
-						<IconLink href='https://github.com/BlakeIsMyWaifu' target='_blank' aria-label='Github' rel='noopener noreferrer'>
-							<FaGithub />
-						</IconLink>
+							<IconLink href='https://github.com/BlakeIsMyWaifu' target='_blank' aria-label='Github' rel='noopener noreferrer'>
+								<FaGithub />
+							</IconLink>
 
-					</IconContext.Provider>
+						</IconContext.Provider>
 
-				</IconContainer>
-			</BottomLinkContainer>
-		</Container>
+					</IconContainer>
+				</BottomLinkContainer>
+			</Container>
+			<BackPadding />
+		</>
 	)
 }
 

@@ -54,3 +54,8 @@ export const IconContainer = styled.div`
 `
 
 export const IconLink = styled.a``
+
+export const BackPadding = styled.div`
+	min-width: 300px;
+	height: 100%;
+`
