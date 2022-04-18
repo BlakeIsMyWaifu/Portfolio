@@ -1,7 +1,7 @@
-import PageContainer from 'components/PageContainer'
+import Waves from 'components/Waves'
 import { FC } from 'react'
 
-import { TextContainer, TextHello, TextJobTitle, TextName } from './Hero-Elements'
+import { Bottom, TextContainer, TextHello, TextJobTitle, TextName, Top } from './Hero-Elements'
 
 const Hero: FC = () => {
 
@@ -10,13 +10,17 @@ const Hero: FC = () => {
 	const textJobTitle = 'Junior Front End Web Developer'
 
 	return (
-		<PageContainer>
-			<TextContainer >
-				<TextHello>{textHello}</TextHello>
-				<TextName>{textName}</TextName>
-				<TextJobTitle>{textJobTitle}</TextJobTitle>
-			</TextContainer>
-		</PageContainer>
+		<>
+			<Top>
+				<TextContainer >
+					<TextHello>{textHello}</TextHello>
+					<TextName>{textName}</TextName>
+					<TextJobTitle>{textJobTitle}</TextJobTitle>
+				</TextContainer>
+				<Waves />
+			</Top>
+			<Bottom />
+		</>
 	)
 }
 
