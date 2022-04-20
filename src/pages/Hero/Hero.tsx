@@ -1,7 +1,7 @@
-import Waves from 'components/Waves'
 import { FC } from 'react'
 
 import { Bottom, TextContainer, TextHello, TextJobTitle, TextName, Top } from './Hero-Elements'
+import Waves from './Waves'
 
 const Hero: FC = () => {
 

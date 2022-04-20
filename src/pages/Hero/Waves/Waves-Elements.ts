@@ -33,7 +33,7 @@ const swellAnimation = keyframes`
 `
 
 export const Wave = styled.div`
-	background: url(./images/wave.svg) repeat-x;
+	background: url(./svg/wave.svg) repeat-x;
 	position: relative;
 	width: 640vw;
 	height: 100%;

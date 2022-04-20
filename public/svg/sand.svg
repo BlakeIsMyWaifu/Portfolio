@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="200">
+  <defs>
+    <linearGradient id="sand" gradientTransform="rotate(90)">
+      <stop stop-color="#d8caae" offset="0%"/>
+      <stop stop-color="#b18f69" offset="0%"/>
+    </linearGradient>
+  </defs>
+  <path fill="url(#sand)" fill-rule="evenodd" d="m1599.995,61.11142c-310.995,0 -409.893,-61.23749 -810.995,-61.11122c-400,0 -500,61.11122 -789,61.11122l0,38.88896l1600,0s-0.005,-24.24247 -0.005,-38.88896z"/>
+</svg>
