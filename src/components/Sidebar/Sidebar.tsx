@@ -3,19 +3,27 @@ import { IconContext } from 'react-icons'
 import { FaEnvelope, FaGithub } from 'react-icons/fa'
 import { cream } from 'utils/colours'
 
-import { BackPadding, BottomLinkContainer, Container, IconContainer, IconLink, PageLink, PageLinkContainer, ResumeLink } from './Sidebar-Elements'
+import { BackPadding, BottomLinkContainer, IconContainer, IconLink, PageLink, PageLinkContainer, ResumeLink, SidebarContainer } from './Sidebar-Elements'
 
 const Sidebar: FC = () => {
+
+	const scrollToSection = (event: React.MouseEvent<HTMLInputElement>): void => {
+		event.preventDefault()
+		const id = event.currentTarget.value.toLowerCase()
+		const el = document.getElementById(id)
+		el?.scrollIntoView()
+	}
+
 	return (
 		<>
-			<Container>
+			<SidebarContainer>
 
 				<PageLinkContainer>
-					<PageLink to='/'>Home</PageLink>
-					<PageLink to='/about'>About</PageLink>
-					<PageLink to='/skills'>Skills</PageLink>
-					<PageLink to='/contact'>Contact</PageLink>
-					<PageLink to='/projects'>Projects</PageLink>
+					<PageLink type='button' value='Home' onClick={scrollToSection} />
+					<PageLink type='button' value='About' onClick={scrollToSection} />
+					<PageLink type='button' value='Skills' onClick={scrollToSection} />
+					<PageLink type='button' value='Contact' onClick={scrollToSection} />
+					<PageLink type='button' value='Projects' onClick={scrollToSection} />
 				</PageLinkContainer>
 
 				<BottomLinkContainer>
@@ -41,7 +49,8 @@ const Sidebar: FC = () => {
 
 					</IconContainer>
 				</BottomLinkContainer>
-			</Container>
+			</SidebarContainer>
+
 			<BackPadding />
 		</>
 	)

@@ -1,15 +1,14 @@
-import { Container } from 'App-Elements'
-import { AnimatePresence } from 'framer-motion'
+import { AppContainer } from 'App-Elements'
+import Sidebar from 'components/Sidebar/Sidebar'
+import Home from 'pages/Home'
 import { FC } from 'react'
-import AppRoutes from 'routes/AppRoutes'
 
 const App: FC = () => {
 	return (
-		<Container>
-			<AnimatePresence exitBeforeEnter>
-				<AppRoutes />
-			</AnimatePresence>
-		</Container>
+		<AppContainer>
+			<Sidebar />
+			<Home />
+		</AppContainer>
 	)
 }
 

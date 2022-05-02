@@ -2,9 +2,12 @@
 	padding: 0;
 	margin: 0;
 	font-family: 'Oswald';
+	scroll-behavior: smooth;
 }
 
-html, body, #root {
+html,
+body,
+#root {
 	height: 100%;
 	width: 100%;
 }

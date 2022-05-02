@@ -1,6 +1,6 @@
 import styled, { css, keyframes } from 'styled-components'
 
-export const Container = styled.div`
+export const WaveContainer = styled.div`
 	height: 200px;
 	width: 100vw;
 	overflow: hidden;

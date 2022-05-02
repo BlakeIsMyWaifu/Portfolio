@@ -2,7 +2,7 @@ import { FC } from 'react'
 import { FaExternalLinkAlt, FaGithub } from 'react-icons/fa'
 
 import { TileData } from '../projectData'
-import { Button, Buttons, Container, Description, Stack, StackWrapper, TextWrapper, Thumbnail, Title } from './ProjectTile-Elements'
+import { Button, Buttons, Description, Stack, StackWrapper, TextWrapper, Thumbnail, TileContainer, Title } from './ProjectTile-Elements'
 
 interface ProjectTileProps extends TileData {
 	right: boolean;
@@ -10,7 +10,7 @@ interface ProjectTileProps extends TileData {
 
 const ProjectTile: FC<ProjectTileProps> = ({ title, image, description, stack, github, website, right }) => {
 	return (
-		<Container right={right}>
+		<TileContainer right={right}>
 			<Thumbnail src={`images/projectsPreviews/${image}.jpg`} />
 			<TextWrapper>
 				<Title>{title}</Title>
@@ -35,7 +35,7 @@ const ProjectTile: FC<ProjectTileProps> = ({ title, image, description, stack, g
 					}
 				</Buttons>
 			</TextWrapper>
-		</Container>
+		</TileContainer>
 	)
 }
 

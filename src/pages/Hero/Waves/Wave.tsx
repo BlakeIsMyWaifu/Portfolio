@@ -1,15 +1,15 @@
 import { FC } from 'react'
 
-import { Container, Wave, WaveWrapper } from './Waves-Elements'
+import { Wave, WaveContainer, WaveWrapper } from './Waves-Elements'
 
 const Waves: FC = () => {
 	return (
-		<Container>
+		<WaveContainer>
 			<WaveWrapper>
 				<Wave />
 				<Wave />
 			</WaveWrapper>
-		</Container>
+		</WaveContainer>
 	)
 }
 

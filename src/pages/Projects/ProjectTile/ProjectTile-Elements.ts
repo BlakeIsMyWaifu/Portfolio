@@ -5,7 +5,7 @@ interface ContainerProps {
 	right: boolean;
 }
 
-export const Container = styled.div<ContainerProps>`
+export const TileContainer = styled.div<ContainerProps>`
 	height: 300px;
 	width: 80%;
 	background-color: ${zodiacBlue};

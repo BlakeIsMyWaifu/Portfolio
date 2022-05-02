@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom'
 import styled, { css } from 'styled-components'
 import { cream, deepBlue, silverPink } from 'utils/colours'
 
@@ -10,7 +9,7 @@ const TextColours = css`
 	}
 `
 
-export const Container = styled.div`
+export const SidebarContainer = styled.div`
 	width: 300px;
 	height: 100%;
 	background-color: ${deepBlue};
@@ -24,13 +23,16 @@ export const PageLinkContainer = styled.div`
 	height: 85%;
 `
 
-export const PageLink = styled(Link)`
+export const PageLink = styled.input`
 	${TextColours}
 	font-size: 3.5rem;
+	text-align: start;
 	transition: margin 200ms;
-	margin-left: 8px;
+	margin-left: 24px;
+	border: none;
+	background: transparent;
 	&:hover {
-		margin-left: 24px;
+		margin-left: 48px;
 	}
 `
 

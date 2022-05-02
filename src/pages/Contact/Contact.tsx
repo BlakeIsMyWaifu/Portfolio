@@ -1,5 +1,5 @@
-import PageContainer from 'components/PageContainer'
-import { Paragraph, Title } from 'components/Text/Text-Elements'
+import { PageContainer } from 'components/PageContainer'
+import { Paragraph, Title } from 'components/Text'
 import emailjs from 'emailjs-com'
 import { FC, useState } from 'react'
 
@@ -35,7 +35,7 @@ const Contact: FC = () => {
 	}
 
 	return (
-		<PageContainer>
+		<PageContainer id='contact'>
 			<Title>Contact</Title>
 			<Paragraph>Currently looking for employment</Paragraph>
 

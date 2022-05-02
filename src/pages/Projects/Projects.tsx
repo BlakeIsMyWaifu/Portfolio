@@ -1,5 +1,5 @@
-import PageContainer from 'components/PageContainer'
-import { Title } from 'components/Text/Text-Elements'
+import { PageContainer } from 'components/PageContainer'
+import { Title } from 'components/Text'
 import { FC } from 'react'
 
 import projectData from './projectData'
@@ -8,7 +8,7 @@ import ProjectTile from './ProjectTile'
 
 const Projects: FC = () => {
 	return (
-		<PageContainer>
+		<PageContainer id='projects'>
 			<Title>Projects</Title>
 			<TileContainer>
 				{

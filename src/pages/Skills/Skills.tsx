@@ -1,5 +1,5 @@
-import PageContainer from 'components/PageContainer'
-import { Paragraph, Title } from 'components/Text/Text-Elements'
+import { PageContainer } from 'components/PageContainer'
+import { Paragraph, Title } from 'components/Text'
 import { FC } from 'react'
 
 import SkillBar from './SkillBar/SkillBar'
@@ -10,7 +10,7 @@ const Skills: FC = () => {
 	const paragraph = 'I build fast, responsive and maintainable websites mainly with React with TypeScript.'
 
 	return (
-		<PageContainer>
+		<PageContainer id='skills'>
 			<Title>Skills and Experience</Title>
 
 			<InnerContainer>

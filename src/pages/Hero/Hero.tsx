@@ -11,7 +11,7 @@ const Hero: FC = () => {
 
 	return (
 		<>
-			<Top>
+			<Top id='home'>
 				<TextContainer >
 					<TextHello>{textHello}</TextHello>
 					<TextName>{textName}</TextName>

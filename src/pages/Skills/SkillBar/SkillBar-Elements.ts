@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import { silverPink } from 'utils/colours'
 
-export const Container = styled.div``
+export const SkillbarContainer = styled.div``
 
 export const Title = styled.h3`
 	color: ${silverPink};

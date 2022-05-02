@@ -1,5 +1,5 @@
-import PageContainer from 'components/PageContainer'
-import { Paragraph, Title } from 'components/Text/Text-Elements'
+import { PageContainer } from 'components/PageContainer'
+import { Paragraph, Title } from 'components/Text'
 import { FC } from 'react'
 
 const About: FC = () => {
@@ -11,7 +11,7 @@ const About: FC = () => {
 	].join('\n\n')
 
 	return (
-		<PageContainer>
+		<PageContainer id='about'>
 			<Title>About Me</Title>
 			<Paragraph>
 				{paragraph}
