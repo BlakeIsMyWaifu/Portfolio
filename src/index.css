@@ -16,3 +16,12 @@ body,
 	font-family: 'Oswald';
 	src: local('Oswald'), url('./fonts/Oswald-VariableFont_wght.ttf');
 }
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5 {
+	text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}

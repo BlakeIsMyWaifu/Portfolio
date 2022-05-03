@@ -7,7 +7,7 @@ export const Title = styled.h1`
 	padding: 2rem;
 `
 
-export const Subtitle = styled.h1`
+export const Subtitle = styled.h2`
 	color: ${silverPink};
 	font-size: 2.5rem;
 	padding: 2rem;
