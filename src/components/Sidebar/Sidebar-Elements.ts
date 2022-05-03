@@ -1,7 +1,8 @@
+import { FaEnvelope, FaGithub } from 'react-icons/fa'
 import styled, { css } from 'styled-components'
 import { cream, deepBlue, silverPink } from 'utils/colours'
 
-const TextColours = css`
+export const TextColours = css`
 	color: ${cream};
 	text-decoration: none;
 	&:hover {
@@ -16,24 +17,11 @@ export const SidebarContainer = styled.div`
 	position: fixed;
 `
 
-export const PageLinkContainer = styled.div`
+export const SectionLinkContainer = styled.div`
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	height: 85%;
-`
-
-export const PageLink = styled.input`
-	${TextColours}
-	font-size: 3.5rem;
-	text-align: start;
-	transition: margin 200ms;
-	margin-left: 24px;
-	border: none;
-	background: transparent;
-	&:hover {
-		margin-left: 48px;
-	}
 `
 
 export const BottomLinkContainer = styled.div`
@@ -41,8 +29,8 @@ export const BottomLinkContainer = styled.div`
 	flex-direction: column;
 `
 
-export const ResumeLink = styled.p`
-	${TextColours}
+export const CVLink = styled.p`
+	${TextColours};
 	font-size: 2rem;
 	text-align: center;
 	cursor: pointer;
@@ -56,6 +44,14 @@ export const IconContainer = styled.div`
 `
 
 export const IconLink = styled.a``
+
+export const EnvelopeIcon = styled(FaEnvelope)`
+	${TextColours};
+`
+
+export const GithubIcon = styled(FaGithub)`
+	${TextColours};
+`
 
 export const BackPadding = styled.div`
 	min-width: 300px;

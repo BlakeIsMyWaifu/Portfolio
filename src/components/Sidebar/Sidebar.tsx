@@ -1,48 +1,38 @@
 import { FC } from 'react'
 import { IconContext } from 'react-icons'
-import { FaEnvelope, FaGithub } from 'react-icons/fa'
-import { cream } from 'utils/colours'
 
-import { BackPadding, BottomLinkContainer, IconContainer, IconLink, PageLink, PageLinkContainer, ResumeLink, SidebarContainer } from './Sidebar-Elements'
+import SectionLink from './SectionLink'
+import { BackPadding, BottomLinkContainer, CVLink, EnvelopeIcon, GithubIcon, IconContainer, IconLink, SectionLinkContainer, SidebarContainer } from './Sidebar-Elements'
 
 const Sidebar: FC = () => {
-
-	const scrollToSection = (event: React.MouseEvent<HTMLInputElement>): void => {
-		event.preventDefault()
-		const id = event.currentTarget.value.toLowerCase()
-		const el = document.getElementById(id)
-		el?.scrollIntoView()
-	}
-
 	return (
 		<>
 			<SidebarContainer>
 
-				<PageLinkContainer>
-					<PageLink type='button' value='Home' onClick={scrollToSection} />
-					<PageLink type='button' value='About' onClick={scrollToSection} />
-					<PageLink type='button' value='Skills' onClick={scrollToSection} />
-					<PageLink type='button' value='Contact' onClick={scrollToSection} />
-					<PageLink type='button' value='Projects' onClick={scrollToSection} />
-				</PageLinkContainer>
+				<SectionLinkContainer>
+					<SectionLink section='Home' />
+					<SectionLink section='About' />
+					<SectionLink section='Skills' />
+					<SectionLink section='Contact' />
+					<SectionLink section='Projects' />
+				</SectionLinkContainer>
 
 				<BottomLinkContainer>
 
-					<ResumeLink>Résumé</ResumeLink>
+					<CVLink>CV</CVLink>
 
 					<IconContainer>
 
 						<IconContext.Provider value={{
-							color: cream,
 							size: '48'
 						}}>
 
 							<IconLink href='mailto:joel.dohmkaratjas@gmail.com' target='_blank' aria-label='Email' rel='noopener noreferrer'>
-								<FaEnvelope />
+								<EnvelopeIcon />
 							</IconLink>
 
 							<IconLink href='https://github.com/BlakeIsMyWaifu' target='_blank' aria-label='Github' rel='noopener noreferrer'>
-								<FaGithub />
+								<GithubIcon />
 							</IconLink>
 
 						</IconContext.Provider>
