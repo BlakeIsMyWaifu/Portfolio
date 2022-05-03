@@ -18,18 +18,18 @@ export const TextContainer = styled.div`
 `
 
 export const TextHello = styled.h2`
-	/* color: ${cream}; */
+	color: ${cream};
 	font-size: 1rem;
 	margin-left: 2rem;
 `
 
 export const TextName = styled.h1`
-	/* color: ${silverPink}; */
+	color: ${silverPink};
 	font-size: 4rem;
 `
 
 export const TextJobTitle = styled.h2`
-	/* color: ${cream}; */
+	color: ${cream};
 	font-size: 2rem;
 	margin-left: 1rem;
 `
