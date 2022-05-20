@@ -23,6 +23,7 @@ h2,
 h3,
 h4,
 h5,
-input {
+input,
+li {
 	text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }

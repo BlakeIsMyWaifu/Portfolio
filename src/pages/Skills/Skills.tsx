@@ -1,21 +1,41 @@
 import { PageContainer } from 'components/PageContainer'
-import { Paragraph, Title } from 'components/Text'
+import SVGShadow from 'components/SVGShadow/SVGShadow'
+import { Paragraph } from 'components/Text'
 import { FC } from 'react'
 
 import SkillBar from './SkillBar/SkillBar'
-import { InnerContainer, SkillBarContainer } from './Skills-Elements'
+import { Eel, InnerContainer, Item, List, ListWrapper, SkillBarContainer, SkillsTitle, TitleWrapper } from './Skills-Elements'
 
 const Skills: FC = () => {
 
-	const paragraph = 'I build fast, responsive and maintainable websites mainly with React with TypeScript.'
+	const projectTypes = [
+		'Websites with TypeScript and React.',
+		'REST APIs with nodejs',
+		'NPM packages',
+		'Mock designs with Figma'
+	]
 
 	return (
 		<PageContainer id='skills'>
-			<Title>Skills and Experience</Title>
 
 			<InnerContainer>
 
-				<Paragraph>{paragraph}</Paragraph>
+				<Eel name='eel'>
+					<TitleWrapper>
+						<SkillsTitle>SkEELs & Experience</SkillsTitle>
+					</TitleWrapper>
+				</Eel>
+
+				<SVGShadow name='stingray' height={99}>
+					<ListWrapper>
+						<Paragraph>{'Some of the projects I\'ve made;'}</Paragraph>
+						<List>
+							{
+								projectTypes.map((projectType, i) => <Item key={i}>{projectType}</Item>)
+							}
+						</List>
+					</ListWrapper>
+				</SVGShadow>
 
 				<SkillBarContainer>
 					<SkillBar name='JavaScript' level={10} colour={'yellow'} />
@@ -26,7 +46,7 @@ const Skills: FC = () => {
 				</SkillBarContainer>
 
 			</InnerContainer>
-		</PageContainer>
+		</PageContainer >
 	)
 }
 
