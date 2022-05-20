@@ -1,7 +1,8 @@
 import { PageContainer } from 'components/PageContainer'
+import SVGShadow from 'components/SVGShadow/SVGShadow'
 import { FC } from 'react'
 
-import { AboutParagraph, AboutTitle, ParagraphWrapper, TitleWrapper, Whale } from './About-Elements'
+import { AboutParagraph, AboutTitle, ParagraphWrapper, TitleWrapper } from './About-Elements'
 
 const About: FC = () => {
 
@@ -24,7 +25,7 @@ const About: FC = () => {
 	return (
 		<PageContainer id='about'>
 
-			<Whale>
+			<SVGShadow name='whale' width={75}>
 
 				<TitleWrapper>
 					<AboutTitle>About Me</AboutTitle>
@@ -34,7 +35,7 @@ const About: FC = () => {
 					<AboutParagraph>{paragraph}</AboutParagraph>
 				</ParagraphWrapper>
 
-			</Whale>
+			</SVGShadow>
 
 		</PageContainer>
 	)

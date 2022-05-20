@@ -1,14 +1,22 @@
 import { AppContainer } from 'App-Elements'
+import Github from 'components/Github/Github'
 import Sidebar from 'components/Sidebar/Sidebar'
 import Home from 'pages/Home'
 import { FC } from 'react'
+import { Route, BrowserRouter as Router, Routes } from 'react-router-dom'
 
 const App: FC = () => {
 	return (
-		<AppContainer>
-			<Sidebar />
-			<Home />
-		</AppContainer>
+		<Router>
+			<AppContainer>
+				<Sidebar />
+				<Home />
+			</AppContainer>
+
+			<Routes>
+				<Route path='/github' element={<Github />} />
+			</Routes>
+		</Router>
 	)
 }
 

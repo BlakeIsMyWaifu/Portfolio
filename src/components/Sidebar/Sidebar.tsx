@@ -11,10 +11,10 @@ const Sidebar: FC = () => {
 
 				<SectionLinkContainer>
 					<SectionLink section='Home' />
-					<SectionLink section='About' />
-					<SectionLink section='Skills' />
-					<SectionLink section='Contact' />
 					<SectionLink section='Projects' />
+					<SectionLink section='Skills' />
+					<SectionLink section='About' />
+					<SectionLink section='Contact' />
 				</SectionLinkContainer>
 
 				<BottomLinkContainer>
