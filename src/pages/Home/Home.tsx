@@ -12,10 +12,10 @@ const Home: FC = () => {
 	return (
 		<HomeContainer>
 			<Hero />
-			<About />
-			<Skills />
-			<Contact />
 			<Projects />
+			<Skills />
+			<About />
+			<Contact />
 			<Footer />
 		</HomeContainer>
 	)
