@@ -1,3 +1,4 @@
+import Bubbles from 'components/Bubbles/Bubbles'
 import About from 'pages/About'
 import Contact from 'pages/Contact'
 import Hero from 'pages/Hero'
@@ -12,11 +13,13 @@ const Home: FC = () => {
 	return (
 		<HomeContainer>
 			<Hero />
-			<Projects />
-			<Skills />
-			<About />
-			<Contact />
-			<Footer />
+			<Bubbles>
+				<Projects />
+				<Skills />
+				<About />
+				<Contact />
+				<Footer />
+			</Bubbles>
 		</HomeContainer>
 	)
 }

@@ -12,6 +12,7 @@ export const TileContainer = styled.div<ContainerProps>`
 	display: flex;
 	flex-direction: ${props => props.right ? 'row-reverse' : 'row'};
 	justify-content: space-between;
+	z-index: 1;
 `
 
 export const TextWrapper = styled.div`
