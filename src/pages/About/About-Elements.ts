@@ -4,14 +4,14 @@ import styled from 'styled-components'
 export const TitleWrapper = styled.span`
 	position: absolute;
 	height: 22vh;
-	left: 2.5vw;
+	left: 2.6vw;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 `
 
 export const AboutTitle = styled(Title)`
-	font-size: 3.5vw;
+	font-size: 3.2vw;
 	padding: 0;
 `
 
