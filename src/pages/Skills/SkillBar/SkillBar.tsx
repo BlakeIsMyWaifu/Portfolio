@@ -1,6 +1,6 @@
 import { FC } from 'react'
 
-import { BarWrapper, BlackBar, ColouredBar, SkillbarContainer, Title } from './SkillBar-Elements'
+import { BarWrapper, BlackBar, ColouredBar, Label, SkillbarContainer, Text } from './SkillBar-Elements'
 
 interface SkillBarProps {
 	name: string;
@@ -11,7 +11,10 @@ interface SkillBarProps {
 const SkillBar: FC<SkillBarProps> = ({ name, level, colour }) => {
 	return (
 		<SkillbarContainer>
-			<Title>{name}</Title>
+			<Label>
+				<Text>{name}</Text>
+				<Text>{level} / 10</Text>
+			</Label>
 			<BarWrapper>
 				<ColouredBar level={level} colour={colour} />
 				<BlackBar />

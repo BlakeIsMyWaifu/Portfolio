@@ -3,8 +3,12 @@ import { silverPink } from 'utils/colours'
 
 export const SkillbarContainer = styled.div``
 
-export const Title = styled.h3`
+export const Label = styled.span``
+
+export const Text = styled.h3`
 	color: ${silverPink};
+	display: inline-block;
+	margin-right: 0.75rem;
 `
 
 export const BarWrapper = styled.div`
