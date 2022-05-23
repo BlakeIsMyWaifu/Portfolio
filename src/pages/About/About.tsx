@@ -21,7 +21,7 @@ const About: FC = () => {
 	return (
 		<PageContainer id='about'>
 
-			<SVGShadow name='whale' width={75}>
+			<SVGShadow name='whale' width={75} aspectRatio='1 / 0.67'>
 
 				<TitleWrapper>
 					<AboutTitle>About Me</AboutTitle>
