@@ -1,12 +1,11 @@
 import { FC } from 'react'
-import { random } from 'utils/Random'
+import { random, randomPosition } from 'utils/Random'
 
 import { BubbleContainer, Dot } from './Bubble-Elements'
 
 const Bubble: FC = () => {
 
-	const posX = random(100)
-	const posY = random(100)
+	const [posX, posY] = randomPosition()
 
 	const animationLength = random(90, 40) / 10
 
