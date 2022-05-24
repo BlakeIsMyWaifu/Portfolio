@@ -8,13 +8,14 @@ import { Route, BrowserRouter as Router, Routes } from 'react-router-dom'
 const App: FC = () => {
 	return (
 		<Router>
-			<AppContainer>
-				<Sidebar />
-				<Home />
-			</AppContainer>
-
 			<Routes>
 				<Route path='/github' element={<Github />} />
+				<Route path='/*' element={
+					<AppContainer>
+						<Sidebar />
+						<Home />
+					</AppContainer>
+				} />
 			</Routes>
 		</Router>
 	)
