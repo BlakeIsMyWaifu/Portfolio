@@ -9,7 +9,7 @@ const Bubbles: FC = ({ children }) => {
 	const bubbleAmount = random(50, 30)
 	const bubbles: JSX.Element[] = []
 	for (let i = 0; i < bubbleAmount; i++) {
-		bubbles.push(<Bubble />)
+		bubbles.push(<Bubble key={i} />)
 	}
 
 	return (
