@@ -1,25 +1,23 @@
 import { FC } from 'react'
 
+import Fishes from './Fishes/Fishes'
 import { Bottom, TextContainer, TextHello, TextJobTitle, TextName, Top } from './Hero-Elements'
 import Waves from './Waves'
 
 const Hero: FC = () => {
-
-	const textHello = 'Hello, I\'m'
-	const textName = 'Joel Dohm-Karatjas'
-	const textJobTitle = 'Junior Front End Web Developer'
-
 	return (
 		<>
 			<Top id='home'>
 				<TextContainer >
-					<TextHello>{textHello}</TextHello>
-					<TextName>{textName}</TextName>
-					<TextJobTitle>{textJobTitle}</TextJobTitle>
+					<TextHello>{'Hello, I\'m'}</TextHello>
+					<TextName>Joel Dohm-Karatjas</TextName>
+					<TextJobTitle>Junior Front End Web Developer</TextJobTitle>
 				</TextContainer>
 				<Waves />
 			</Top>
-			<Bottom />
+			<Bottom>
+				<Fishes />
+			</Bottom>
 		</>
 	)
 }

@@ -1,11 +1,9 @@
 import { FC } from 'react'
+import { random } from 'utils/Random'
 
 import { Bottom, FooterContainer, SVG, Sand } from './Footer-Elements'
 
 const Footer: FC = () => {
-
-	const random = (max: number, min = 0): number => ~~(Math.random() * (max - min)) + min
-
 	return (
 		<FooterContainer>
 			<Sand offset={random(200)} />
