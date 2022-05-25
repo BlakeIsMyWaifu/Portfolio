@@ -10,10 +10,12 @@ export const AppContainer = styled.div`
 `
 
 interface HomeContainerProps {
-	display: boolean;
+	visible: boolean;
 }
 
 export const HomeContainer = styled(PageContainer) <HomeContainerProps>`
 	background: linear-gradient(${steel} 30%, ${vogue});
-	visibility: ${props => props.display ? 'visible' : 'collapse'};
+	visibility: ${props => props.visible ? 'visible' : 'collapse'};
+	padding: 0;
+	overflow: hidden;
 `

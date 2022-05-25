@@ -30,7 +30,7 @@ const Home: FC = () => {
 			{
 				isMobile && <ToggleSidebarButton sidebarVisible={sidebarVisible} setSidebarVisible={setSidebarVisible} />
 			}
-			<HomeContainer display={!sidebarVisible}>
+			<HomeContainer visible={!sidebarVisible}>
 				<Hero />
 				<Bubbles>
 					<Projects />
