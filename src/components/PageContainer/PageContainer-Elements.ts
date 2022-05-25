@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const PageContainer = styled.div`
-	max-width: calc(100vw - 300px);
+	max-width: 100%;
 	min-height: 100vh;
 	overflow-x: hidden;
 	padding: 16px;

@@ -1,4 +1,4 @@
-import { useObjectState } from 'hooks/useObjectState'
+import useObjectState from 'hooks/useObjectState'
 import useWindowSize from 'hooks/useWindowSize'
 import { FC, useEffect, useMemo, useState } from 'react'
 import { FilledArray, random, randomElementFromFilledArray } from 'utils/Random'
