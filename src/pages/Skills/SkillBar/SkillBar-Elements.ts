@@ -12,7 +12,7 @@ export const Text = styled.h3`
 `
 
 export const BarWrapper = styled.div`
-	width: 40vw;
+	width: 100%;
 	height: 8px;
 	position: relative;
 	border-radius: 8px;
