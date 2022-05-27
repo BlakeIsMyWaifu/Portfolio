@@ -1,6 +1,7 @@
 import { PageContainer } from 'components/PageContainer'
 import { Paragraph, Title } from 'components/Text'
 import emailjs from 'emailjs-com'
+import useIsMobile from 'hooks/useIsMobile'
 import { FC, useState } from 'react'
 
 import { Button, FormContainer, Input, InputWrapper, TextArea } from './Contact-Elements'
@@ -26,20 +27,22 @@ const Contact: FC = () => {
 		}
 
 		emailjs.send(serviceId, templateId, templateParams, userId)
-			.then(response => console.log(response))
+			.then(_response => {
+				setName('')
+				setEmail('')
+				setMessage('')
+			})
 			.then(error => console.error(error))
-
-		setName('')
-		setEmail('')
-		setMessage('')
 	}
+
+	const isMobile = useIsMobile()
 
 	return (
 		<PageContainer id='contact'>
 			<Title>Contact</Title>
 			<Paragraph>Currently looking for employment</Paragraph>
 
-			<FormContainer>
+			<FormContainer isMobile={isMobile}>
 				<InputWrapper area='email'>
 					<Input type='email' placeholder='Email' value={email} onChange={event => setEmail(event.target.value)} />
 				</InputWrapper>
