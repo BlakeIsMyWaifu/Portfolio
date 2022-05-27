@@ -41,6 +41,12 @@ export const MobileParagraphWrapper = styled.span`
 	transform: translateY(-25%);
 `
 
+export const MobileAboutTitle = styled(Title)`
+	font-size: 48px;
+	padding: 0;
+	text-align: center;
+`
+
 export const MobileAboutParagraph = styled(Paragraph)`
 	font-size: 20px;
 `

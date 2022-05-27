@@ -3,7 +3,7 @@ import SVGShadow from 'components/SVGShadow/SVGShadow'
 import useIsMobile from 'hooks/useIsMobile'
 import { FC } from 'react'
 
-import { AboutParagraph, AboutTitle, MobileAboutParagraph, MobileParagraphWrapper, MobileWhale, ParagraphWrapper, TitleWrapper } from './About-Elements'
+import { AboutParagraph, AboutTitle, MobileAboutParagraph, MobileAboutTitle, MobileParagraphWrapper, MobileWhale, ParagraphWrapper, TitleWrapper } from './About-Elements'
 
 const About: FC = () => {
 
@@ -41,7 +41,9 @@ const About: FC = () => {
 		<PageContainer id='about'>
 
 			<MobileWhale name='whale' aspectRatio='1 / 0.67' />
+
 			<MobileParagraphWrapper>
+				<MobileAboutTitle>About Me</MobileAboutTitle>
 				<MobileAboutParagraph>{paragraph}</MobileAboutParagraph>
 			</MobileParagraphWrapper>
 
