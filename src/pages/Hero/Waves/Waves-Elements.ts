@@ -4,7 +4,6 @@ export const WaveContainer = styled.div`
 	height: 200px;
 	width: 100vw;
 	overflow: hidden;
-	margin-left: -16px;
 `
 
 export const WaveWrapper = styled.div`

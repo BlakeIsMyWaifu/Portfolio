@@ -1,3 +1,4 @@
+import useIsMobile from 'hooks/useIsMobile'
 import { FC, useEffect, useRef, useState } from 'react'
 
 import Fish from './Fish'
@@ -9,6 +10,8 @@ const Fishes: FC = () => {
 
 	const [renderFish, setRenderFish] = useState(false)
 
+	const isMobile = useIsMobile()
+
 	useEffect(() => {
 		setRenderFish(true)
 	}, [fishesRef.current])
@@ -18,7 +21,7 @@ const Fishes: FC = () => {
 			{
 				renderFish && <>
 					<Fish fishesRef={fishesRef} />
-					<Fish fishesRef={fishesRef} />
+					{!isMobile && <Fish fishesRef={fishesRef} />}
 				</>
 			}
 		</FishesContainer>
