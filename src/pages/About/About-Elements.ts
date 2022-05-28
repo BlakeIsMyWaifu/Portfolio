@@ -1,3 +1,4 @@
+import SVGShadow from 'components/SVGShadow'
 import { Paragraph, Title } from 'components/Text'
 import styled from 'styled-components'
 
@@ -26,4 +27,26 @@ export const AboutParagraph = styled(Paragraph)`
 	font-size: 1.2vw;
 	padding: 0;
 	line-height: 3vh;
+`
+
+export const MobileWhale = styled(SVGShadow)`
+	height: calc(100vw - 16px);
+	transform: rotate(-90deg) translateY(-50%) translateX(-15%);
+	transform-origin: 65%;
+`
+
+export const MobileParagraphWrapper = styled.span`
+	position: absolute;
+	top: 25%;
+	transform: translateY(-25%);
+`
+
+export const MobileAboutTitle = styled(Title)`
+	font-size: 48px;
+	padding: 0;
+	text-align: center;
+`
+
+export const MobileAboutParagraph = styled(Paragraph)`
+	font-size: 20px;
 `

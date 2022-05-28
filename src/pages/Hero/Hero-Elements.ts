@@ -2,8 +2,7 @@ import styled from 'styled-components'
 import { cream, silverPink, steel } from 'utils/colours'
 
 export const Top = styled.div`
-	height: 400px;
-	margin: -16px;
+	min-height: 400px;
 	background: linear-gradient(to bottom, #757abf 0%,#8583be 35%,#eab0d1 100%);
 `
 

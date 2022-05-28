@@ -10,9 +10,13 @@ export const TextColours = css`
 	}
 `
 
-export const SidebarContainer = styled.div`
-	width: 300px;
-	height: 100%;
+interface SidebarContainerProps {
+	isMobile: boolean;
+}
+
+export const SidebarContainer = styled.div<SidebarContainerProps>`
+	width: ${props => props.isMobile ? '100vw' : '300px'};
+	height: 100vh;
 	background-color: ${deepBlue};
 	position: fixed;
 `
@@ -53,7 +57,11 @@ export const GithubIcon = styled(FaGithub)`
 	${TextColours};
 `
 
-export const BackPadding = styled.div`
-	min-width: 300px;
+interface BackPaddingProps {
+	isMobile: boolean;
+}
+
+export const BackPadding = styled.div<BackPaddingProps>`
+	min-width: ${props => props.isMobile ? '100%' : '300px'};
 	height: 100%;
 `

@@ -12,3 +12,5 @@ export const useObjectState = <T extends object>(initialState: InitialState<T>):
 
 	return [state, setObjectState]
 }
+
+export default useObjectState

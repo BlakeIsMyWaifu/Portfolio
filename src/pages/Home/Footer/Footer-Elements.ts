@@ -4,7 +4,6 @@ export const FooterContainer = styled.div`
 	padding-top: 20vh;
 	height: 200px;
 	width: 100vw;
-	margin: -16px;
 	position: relative;
 	overflow-x: hidden;
 `
@@ -30,11 +29,12 @@ interface SVGProps {
 	bottom: number;
 	left?: number;
 	right?: number;
+	isMobile: boolean;
 }
 
 export const SVG = styled.div<SVGProps>`
 	background: url(./svg/${props => props.name}.svg) no-repeat bottom;
-	width: 10vw;
+	width: ${props => props.isMobile ? '22.5vw' : '10vw'};
 	aspect-ratio: 1;
 	position: absolute;
 	bottom: ${props => props.bottom}px;

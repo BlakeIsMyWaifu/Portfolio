@@ -1,20 +1,28 @@
+import useIsMobile from 'hooks/useIsMobile'
 import { FC } from 'react'
 import { IconContext } from 'react-icons'
 
 import SectionLink from './SectionLink'
 import { BackPadding, BottomLinkContainer, CVLink, EnvelopeIcon, GithubIcon, IconContainer, IconLink, SectionLinkContainer, SidebarContainer } from './Sidebar-Elements'
 
-const Sidebar: FC = () => {
+interface SidebarProps {
+	setSidebarVisible: React.Dispatch<React.SetStateAction<boolean>>;
+}
+
+const Sidebar: FC<SidebarProps> = ({ setSidebarVisible }) => {
+
+	const isMobile = useIsMobile()
+
 	return (
 		<>
-			<SidebarContainer>
+			<SidebarContainer isMobile={isMobile}>
 
 				<SectionLinkContainer>
-					<SectionLink section='Home' />
-					<SectionLink section='Projects' />
-					<SectionLink section='Skills' />
-					<SectionLink section='About' />
-					<SectionLink section='Contact' />
+					<SectionLink section='Home' setSidebarVisible={setSidebarVisible} />
+					<SectionLink section='Projects' setSidebarVisible={setSidebarVisible} />
+					<SectionLink section='Skills' setSidebarVisible={setSidebarVisible} />
+					<SectionLink section='About' setSidebarVisible={setSidebarVisible} />
+					<SectionLink section='Contact' setSidebarVisible={setSidebarVisible} />
 				</SectionLinkContainer>
 
 				<BottomLinkContainer>
@@ -41,7 +49,7 @@ const Sidebar: FC = () => {
 				</BottomLinkContainer>
 			</SidebarContainer>
 
-			<BackPadding />
+			<BackPadding isMobile={isMobile} />
 		</>
 	)
 }

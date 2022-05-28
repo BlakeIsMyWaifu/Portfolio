@@ -28,13 +28,27 @@ const TextInput = css`
 	}
 `
 
-export const FormContainer = styled.div`
-	display: grid;
+interface FormContainerProps {
+	isMobile: boolean;
+}
+
+const desktopGrid = css`
 	grid-template-rows: 1.5fr 6fr 1.2fr;
 	grid-template-columns: 1fr 1fr;
 	grid-template-areas: "email name" "message message" ". button";
+`
+
+const mobileGrid = css`
+	grid-template-rows: 1.5fr 1.5fr 6fr 1.2fr;
+	grid-template-columns: 1fr;
+	grid-template-areas: "email" "name" "message" "button";
+`
+
+export const FormContainer = styled.div<FormContainerProps>`
+	display: grid;
 	grid-gap: 16px;
 	margin-top: 4rem;
+	${props => props.isMobile ? mobileGrid : desktopGrid}
 `
 
 interface InputWrapperProps {
