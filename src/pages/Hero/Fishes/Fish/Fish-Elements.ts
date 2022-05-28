@@ -10,7 +10,7 @@ interface FishContainerProps {
 }
 
 export const FishContainer = styled.div<FishContainerProps>`
-	background: url(./svg/Fish/${props => props.name}.svg) no-repeat;
+	background: url(./svg/fish/${props => props.name}.svg) no-repeat;
 	height: ${props => props.size}px;
 	aspect-ratio: 1;
 	position: absolute;
