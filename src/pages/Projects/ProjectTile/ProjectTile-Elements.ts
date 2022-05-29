@@ -6,7 +6,7 @@ interface Direction {
 }
 
 export const TileContainer = styled.div<Direction>`
-	height: 300px;
+	min-height: 300px;
 	width: 60vw;
 	background-color: ${zodiacBlue};
 	display: flex;
@@ -18,17 +18,17 @@ export const TileContainer = styled.div<Direction>`
 	margin: 0 8vw;
 `
 
+export const Thumbnail = styled.img`
+	height: 280px;
+	padding: 10px;
+	border-radius: 20px;
+`
+
 export const TextWrapper = styled.div<Direction>`
 	width: 100%;
 	display: flex;
 	flex-direction: column;
 	text-align: ${props => props.right ? 'right' : 'left'};
-`
-
-export const Thumbnail = styled.img`
-	height: 280px;
-	padding: 10px;
-	border-radius: 20px;
 `
 
 export const Title = styled.h3`
@@ -48,6 +48,7 @@ export const Description = styled.p<Direction>`
 export const StackWrapper = styled.span<Direction>`
 	display: flex;
 	flex-direction: ${props => props.right ? 'row-reverse' : 'row'};
+	flex-wrap: wrap;
 	gap: 8px;
 	margin: 16px;
 `
@@ -72,4 +73,25 @@ export const Buttons = styled.span<Direction>`
 export const Button = styled.a`
 	color: ${cream};
 	cursor: pointer;
+`
+
+export const MobileTileContainer = styled.div`
+	width: 90vw;
+	align-self: center;
+	background-color: ${zodiacBlue};
+	display: flex;
+	flex-direction: column;
+	z-index: 1;
+	border-radius: 20px;
+`
+
+export const MobileThumbnail = styled.img`
+	width: 100%;
+	box-sizing: border-box;
+	padding: 10px;
+	border-radius: 20px;
+`
+
+export const MobileDescription = styled(Description)`
+	margin: 0;
 `
