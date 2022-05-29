@@ -1,9 +1,7 @@
 export const deepBlue = '#22223B'
-export const mulledBlue = '#4A4E69'
 export const zodiacBlue = 'rgba(57, 63, 84, 0.8)'
 export const silverPink = '#C9ADA7'
 export const cream = '#F2E9E4'
-export const mountainMist = '#9A8C98'
 
 export const vogue = '#01234C'
 export const astronaut = '#014B60'
@@ -12,9 +10,11 @@ export const blizzard = '#A6D0EF'
 
 export default {
 	deepBlue,
-	mulledBlue,
 	zodiacBlue,
 	silverPink,
 	cream,
-	mountainMist
+	vogue,
+	astronaut,
+	steel,
+	blizzard
 }

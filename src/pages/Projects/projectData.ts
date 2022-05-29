@@ -10,11 +10,18 @@ export interface TileData {
 export const projectData: TileData[] = [
 	{
 		title: 'Payday Builder',
-		description: 'A web app for creating builds for Payday 2',
+		description: 'Web app for creating and sharing Payday 2 builds',
 		stack: ['Nodejs', 'React', 'TypeScript', 'Redux', 'Styled Components', 'Webpack'],
 		image: 'thumbnail',
 		github: 'PaydayBuilder',
 		website: 'https://www.pd2.dev/'
+	},
+	{
+		title: 'Portfolio',
+		description: 'The website you\'re currently viewing',
+		stack: ['Nodejs', 'React', 'TypeScript', 'Styled Components', 'Vite'],
+		image: 'thumbnail',
+		github: 'Portfolio'
 	},
 	{
 		title: 'TheGreekYogi',
@@ -39,13 +46,6 @@ export const projectData: TileData[] = [
 		image: 'thumbnail',
 		github: 'WeWatch',
 		website: 'https://we-watch.vercel.app'
-	},
-	{
-		title: 'Portfolio',
-		description: 'The website you\'re currently viewing',
-		stack: ['Nodejs', 'React', 'TypeScript', 'Styled Components', 'Vite'],
-		image: 'thumbnail',
-		github: 'Portfolio'
 	}
 ]
 
