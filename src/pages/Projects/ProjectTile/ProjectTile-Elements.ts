@@ -1,3 +1,4 @@
+import { MdZoomOutMap } from 'react-icons/md'
 import styled from 'styled-components'
 import { cream, deepBlue, silverPink, zodiacBlue } from 'utils/colours'
 
@@ -5,12 +6,17 @@ interface Direction {
 	right: boolean;
 }
 
-export const TileContainer = styled.div<Direction>`
+interface ImageDirection extends Direction {
+	largeImage: boolean;
+	ref?: React.RefObject<HTMLDivElement>;
+}
+
+export const TileContainer = styled.div<ImageDirection>`
 	min-height: 300px;
 	width: 60vw;
 	background-color: ${zodiacBlue};
 	display: flex;
-	flex-direction: ${props => props.right ? 'row-reverse' : 'row'};
+	flex-direction: ${props => props.largeImage ? 'column' : (props.right ? 'row-reverse' : 'row')};
 	justify-content: space-between;
 	z-index: 1;
 	border-radius: 20px;
@@ -18,10 +24,31 @@ export const TileContainer = styled.div<Direction>`
 	margin: 0 8vw;
 `
 
-export const Thumbnail = styled.img`
-	height: 280px;
+export const ThumbnailContainer = styled.div`
+	position: relative;
+	cursor: pointer;
+`
+
+interface ThumbnailProps {
+	largeImage: boolean;
+}
+
+export const Thumbnail = styled.img<ThumbnailProps>`
+	height: ${props => props.largeImage ? 'auto' : '300px'};
+	width: ${props => props.largeImage ? '100%' : 'auto'};
 	padding: 10px;
 	border-radius: 20px;
+	box-sizing: border-box;
+`
+
+export const ZoomOutIcon = styled(MdZoomOutMap)`
+	position: absolute;
+	width: 32px;
+	height: auto;
+	bottom: 16px;
+	right: 16px;
+	color: white;
+	mix-blend-mode: difference;
 `
 
 export const TextWrapper = styled.div<Direction>`
@@ -37,12 +64,14 @@ export const Title = styled.h3`
 	margin: 16px;
 `
 
-export const Description = styled.p<Direction>`
+export const Description = styled.p<ImageDirection>`
 	background-color: ${deepBlue};
 	color: ${cream};
 	font-size: 1.5rem;
 	padding: 8px;
-	margin: ${props => props.right ? '0 -10px 0 0' : '0 0 0 -10px'};
+	margin: ${props => props.largeImage ? 0 : (props.right ? '0 -10px 0 0' : '0 0 0 -10px')};
+	width: 100%;
+	box-sizing: border-box;
 `
 
 export const StackWrapper = styled.span<Direction>`

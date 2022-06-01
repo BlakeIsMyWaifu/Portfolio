@@ -1,10 +1,10 @@
 import useIsDev from 'hooks/useIsDev'
 import useIsMobile from 'hooks/useIsMobile'
-import { FC, useEffect, useState } from 'react'
+import { FC, useEffect, useRef, useState } from 'react'
 import { FaExternalLinkAlt, FaGithub } from 'react-icons/fa'
 
 import { TileData } from '../projectData'
-import { Button, Buttons, CommitCount, Description, MobileDescription, MobileThumbnail, MobileTileContainer, Stack, StackWrapper, TextWrapper, Thumbnail, TileContainer, Title } from './ProjectTile-Elements'
+import { Button, Buttons, CommitCount, Description, MobileDescription, MobileThumbnail, MobileTileContainer, Stack, StackWrapper, TextWrapper, Thumbnail, ThumbnailContainer, TileContainer, Title, ZoomOutIcon } from './ProjectTile-Elements'
 
 interface ProjectTileProps extends TileData {
 	right: boolean;
@@ -13,6 +13,10 @@ interface ProjectTileProps extends TileData {
 const ProjectTile: FC<ProjectTileProps> = ({ title, image, description, stack, github, website, right }) => {
 
 	const [commitAmount, setCommitAmount] = useState(0)
+
+	const [largeImage, setLargeImage] = useState(false)
+
+	const containerRef = useRef<HTMLDivElement>(null)
 
 	const isDev = useIsDev()
 
@@ -33,15 +37,26 @@ const ProjectTile: FC<ProjectTileProps> = ({ title, image, description, stack, g
 	}, [])
 
 	return !isMobile ? (
-		<TileContainer right={right}>
+		<TileContainer right={right} largeImage={largeImage} ref={containerRef}>
 
-			<Thumbnail src={`images/projectsPreviews/${image}.jpg`} />
+			<ThumbnailContainer
+				onClick={() => {
+					setLargeImage(!largeImage)
+					if (!containerRef.current) return
+					containerRef.current.scrollIntoView()
+				}}>
+				<Thumbnail
+					src={`images/projectsPreviews/${image}.jpg`}
+					largeImage={largeImage}
+				/>
+				<ZoomOutIcon />
+			</ThumbnailContainer>
 
 			<TextWrapper right={right}>
 
 				<Title>{title}</Title>
 
-				<Description right={right}>{description}</Description>
+				<Description right={right} largeImage={largeImage}>{description}</Description>
 
 				<StackWrapper right={right}>
 					{
@@ -78,7 +93,7 @@ const ProjectTile: FC<ProjectTileProps> = ({ title, image, description, stack, g
 
 			<Title>{title}</Title>
 
-			<MobileDescription right={false}>{description}</MobileDescription>
+			<MobileDescription right={false} largeImage={false}>{description}</MobileDescription>
 
 			<StackWrapper right={false}>
 				{
