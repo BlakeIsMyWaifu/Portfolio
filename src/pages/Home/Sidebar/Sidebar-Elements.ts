@@ -33,7 +33,11 @@ export const BottomLinkContainer = styled.div`
 	flex-direction: column;
 `
 
-export const CVLink = styled.p`
+export const CVLink = styled.a`
+	text-decoration: none;
+`
+
+export const CV = styled.p`
 	${TextColours};
 	font-size: 2rem;
 	text-align: center;
