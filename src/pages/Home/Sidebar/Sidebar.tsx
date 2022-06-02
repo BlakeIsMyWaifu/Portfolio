@@ -3,7 +3,7 @@ import { FC } from 'react'
 import { IconContext } from 'react-icons'
 
 import SectionLink from './SectionLink'
-import { BackPadding, BottomLinkContainer, CVLink, EnvelopeIcon, GithubIcon, IconContainer, IconLink, SectionLinkContainer, SidebarContainer } from './Sidebar-Elements'
+import { BackPadding, BottomLinkContainer, CV, CVLink, EnvelopeIcon, GithubIcon, IconContainer, IconLink, SectionLinkContainer, SidebarContainer } from './Sidebar-Elements'
 
 interface SidebarProps {
 	setSidebarVisible: React.Dispatch<React.SetStateAction<boolean>>;
@@ -27,7 +27,9 @@ const Sidebar: FC<SidebarProps> = ({ setSidebarVisible }) => {
 
 				<BottomLinkContainer>
 
-					<CVLink>CV</CVLink>
+					<CVLink href={'./CV.pdf'} target='_blank' rel='noopener noreferrer'>
+						<CV>CV</CV>
+					</CVLink>
 
 					<IconContainer>
 
