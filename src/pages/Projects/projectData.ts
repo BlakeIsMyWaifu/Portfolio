@@ -26,7 +26,7 @@ export const projectData: TileData[] = [
 	},
 	{
 		title: 'TheGreekYogi',
-		description: 'Website for my fathers yoga classes',
+		description: 'Website for my father\'s yoga classes',
 		stack: ['Nodejs', 'React', 'TypeScript', 'Styled Components', 'Vite'],
 		image: 'theGreekYogi',
 		github: 'TheGreekYogi',
